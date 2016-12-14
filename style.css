@@ -1,0 +1,61 @@
+@import "compass/css3";
+
+.rwd-table {
+  margin: 1em 0;
+  min-width: 900px; /* adjust to your needs*/
+}
+  tr, th {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+  }
+
+/* unvisited link */
+a:link {
+    color: #ffffff;
+}
+
+/* visited link */
+a:visited {
+    color: #ffff00;
+}
+
+/* mouse over link */
+a:hover, a:active {
+    color: #ff0080;
+}
+
+/* presentational styling*/
+
+@import 'http://fonts.googleapis.com/css?family=Montserrat:300,400,700';
+
+body {
+  padding: 0 2em;
+  font-family: Montserrat, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #444;
+  background: #eee;
+}
+
+h2 {
+  font-weight: normal;
+  letter-spacing: -1px;
+  color: #34495E;
+}
+
+.rwd-table {
+  background: #34495E;
+  color: #fff;
+  border-radius: .4em;
+  overflow: hidden;
+  tr {
+    border-color: lighten(#34495E, 10%);
+  }
+  th, td {
+    margin: .5em 1em;
+  }
+  th, td:before {
+    color: #dd5;
+  }
+}
