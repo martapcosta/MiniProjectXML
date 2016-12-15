@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	version="1.0">
-
-	<!-- <xsl:output method="html" encoding="utf-8" doctype-system="about:legacy-compat" 
-		/> -->
 	<xsl:template match="/lfm">
 		<html>
 			<head>
 				<title>Top 1000 Last FM Tracks</title>
-				<link rel="stylesheet" href="style.css" type="text/css"/>
+				<link rel="stylesheet" href="style.css" type="text/css" />
 			</head>
 			<body>
 				<h2>Top 1000 Last FM Tracks</h2>
