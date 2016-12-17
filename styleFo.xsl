@@ -34,10 +34,10 @@
 					<fo:block>
 						<fo:table text-align="center" table-layout="fixed" width="100%">
 							<fo:table-column column-width="1cm" />
-							<fo:table-column column-width="7cm" />
-							<fo:table-column column-width="6cm" />
-							<fo:table-column column-width="2cm" />
-							<fo:table-column column-width="2cm" />
+							<fo:table-column column-width="6.5cm" />
+							<fo:table-column column-width="5.5cm" />
+							<fo:table-column column-width="2.5cm" />
+							<fo:table-column column-width="2.5cm" />
 							<fo:table-header font-weight="bold">
 								<fo:table-row>
 									<fo:table-cell border="1pt solid black">
@@ -93,12 +93,12 @@
 										</fo:table-cell>
 										<fo:table-cell border="1pt solid black">
 											<fo:block>
-												<xsl:value-of select='playcount' />
+												<xsl:value-of select='format-number(playcount, "###,###")' />
 											</fo:block>
 										</fo:table-cell>
 										<fo:table-cell border="1pt solid black">
 											<fo:block>
-												<xsl:value-of select="listeners" />
+												<xsl:value-of select='format-number(listeners, "###,###")' />
 											</fo:block>
 										</fo:table-cell>
 									</fo:table-row>
