@@ -1,36 +1,48 @@
 @import "compass/css3";
 
 .rwd-table {
-  margin: 1em 0;
-  min-width: 900px; /* adjust to your needs*/
-  text-align: center;
-  background: #34495E;
-  color: #fff;
-  border-radius: .4em;
+	margin: 1em 0;
+	min-width: 900px; /* adjust to your needs*/
+	text-align: center;
+	background: #34495E;
+	color: #fff;
+	border-radius: .4em;
 }
 
 th {
-	  color: #34495E;
+	color: #34495E;
 }
+
 a:link, a:visited {
-    color: #ffffff;
+	color: #ffffff;
 }
 
 a:hover, a:active {
-    color: #ff0080;
+	color: #000080;
+	font-size:1.5em;
+}
+
+img:hover {
+	border: 70px solid #000; border-radius : 50%;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	transition: all 1s ease;
+	border-radius: 50%;
 }
 
 body {
-  padding: 0 2em;
-  font-family: Montserrat, sans-serif;
-  text-rendering: optimizeLegibility;
-  color: #444;
-  background: #eee;
+	padding: 0 2em;
+	font-family: Montserrat, sans-serif;
+	text-rendering: optimizeLegibility;
+	color: #444;
+	background: #eee;
 }
 
 h2 {
-  font-weight: normal;
-  letter-spacing: -1px;
-  color: #34495E;
-  padding: 1em;
+	font-weight: normal;
+	letter-spacing: -1px;
+	color: #34495E;
+	padding: 1em;
 }

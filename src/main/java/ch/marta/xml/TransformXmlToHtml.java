@@ -9,7 +9,7 @@ import javax.xml.transform.stream.StreamSource;
 public class TransformXmlToHtml {
 	public static void transform() throws TransformerException {
 		String from = "document.xml";
-		String stylesheet = "styleHtml.xsl";
+		String stylesheet = "xslHtml.xsl";
 		String to = "document.html";
 
 		TransformerFactory factory = TransformerFactory.newInstance();

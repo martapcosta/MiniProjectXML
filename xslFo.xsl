@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	version="1.0">
+	<xsl:import href="styles.xsl" />
 	<xsl:template match="/lfm">
 		<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
 
@@ -31,15 +33,17 @@
 					</fo:block>
 				</fo:static-content>
 				<fo:flow flow-name="top-tracks-region">
-					<fo:block>
-						<fo:table text-align="center" table-layout="fixed" width="100%">
+					<fo:block font-size="8pt">
+						<xsl:variable name="sum_listeners" select="sum(tracks/track/listeners)" />
+						<xsl:variable name="sum_played" select="sum(tracks/track/playcount)" />
+						<fo:table xsl:use-attribute-sets="CustomStyles">
 							<fo:table-column column-width="1cm" />
-							<fo:table-column column-width="6.5cm" />
-							<fo:table-column column-width="5.5cm" />
+							<fo:table-column column-width="7.5cm" />
+							<fo:table-column column-width="5cm" />
 							<fo:table-column column-width="2.5cm" />
 							<fo:table-column column-width="2.5cm" />
 							<fo:table-header font-weight="bold">
-								<fo:table-row>
+								<fo:table-row keep-together="always">
 									<fo:table-cell border="1pt solid black">
 										<fo:block>Top</fo:block>
 									</fo:table-cell>
@@ -57,11 +61,11 @@
 									</fo:table-cell>
 								</fo:table-row>
 							</fo:table-header>
-							<fo:table-body border="1pt solid black">
+							<fo:table-body>
 								<xsl:for-each select="tracks/track">
 									<xsl:sort select="playcount" order="descending"
 										data-type="number" />
-									<fo:table-row>
+									<fo:table-row keep-together="always">
 										<fo:table-cell border="1pt solid black">
 											<fo:block>
 												<xsl:value-of select="position()" />
@@ -92,13 +96,26 @@
 											</fo:block>
 										</fo:table-cell>
 										<fo:table-cell border="1pt solid black">
-											<fo:block>
+											<fo:block space-after="2mm">
 												<xsl:value-of select='format-number(playcount, "###,###")' />
+											</fo:block>
+											<fo:block>
+												(
+												<xsl:value-of
+													select='format-number(playcount div $sum_played,"#0.000%")' />
+												)
 											</fo:block>
 										</fo:table-cell>
 										<fo:table-cell border="1pt solid black">
-											<fo:block>
+
+											<fo:block space-after="2mm">
 												<xsl:value-of select='format-number(listeners, "###,###")' />
+											</fo:block>
+											<fo:block>
+												(
+												<xsl:value-of
+													select='format-number(listeners div $sum_listeners,"#0.000%")' />
+												)
 											</fo:block>
 										</fo:table-cell>
 									</fo:table-row>

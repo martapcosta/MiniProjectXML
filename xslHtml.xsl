@@ -54,17 +54,16 @@
 								<xsl:value-of select='format-number(playcount, "###,###")' />
 								<br />
 								<br />
-								<xsl:value-of
-									select='format-number(playcount div $sum_played,"#0.000%")' />
+								(<xsl:value-of
+									select='format-number(playcount div $sum_played,"#0.000%")' />)
 							</td>
 							<td>
 								<xsl:value-of select='format-number(listeners,"###,###")' />
 								<br />
 								<br />
-								<xsl:value-of
-									select='format-number(listeners div $sum_listeners,"#0.000%")' />
+								(<xsl:value-of
+									select='format-number(listeners div $sum_listeners,"#0.000%")' />)
 							</td>
-
 							<xsl:for-each select="artist">
 								<td>
 									<a target="_blank">
@@ -82,28 +81,6 @@
 						</tr>
 					</xsl:for-each>
 				</table>
-				<h2>Top Artists from the 1000 Last FM Top Tracks</h2>
-				<xsl:for-each select="tracks/track/artist/name">
-					<h2><xsl:value-of select='format-number(count(tracks/track/track/name), "###,###")'/></h2>
-					</xsl:for-each>
-					<table class="rwd-table" border="1">
-						<tr bgcolor="#E6E6FA">
-							<th>Top</th>
-							<th>Artist name</th>
-							<th>Number of musics in the top 1000</th>
-						</tr>
-						<tr>
-								<td>
-									<xsl:value-of select="position()" />
-								</td>
-								<td>
-									<xsl:value-of select="artist/name" />
-								</td>
-								<td>
-								</td>
-							
-						</tr>
-					</table>
 			</body>
 		</html>
 	</xsl:template>

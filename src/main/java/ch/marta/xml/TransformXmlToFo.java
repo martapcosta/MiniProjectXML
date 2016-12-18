@@ -9,7 +9,7 @@ import javax.xml.transform.stream.StreamSource;
 public class TransformXmlToFo {
 	public static void transform() throws TransformerException {
 		String from = "document.xml";
-		String stylesheet = "styleFo.xsl";
+		String stylesheet = "xslFo.xsl";
 		String to = "document.fo";
 
 		TransformerFactory factory = TransformerFactory.newInstance();
