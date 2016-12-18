@@ -36,12 +36,12 @@
 					<fo:block font-size="8pt">
 						<xsl:variable name="sum_listeners" select="sum(tracks/track/listeners)" />
 						<xsl:variable name="sum_played" select="sum(tracks/track/playcount)" />
-						<fo:table xsl:use-attribute-sets="CustomStyles">
+						<fo:table display-align="after" xsl:use-attribute-sets="CustomStyles">
 							<fo:table-column column-width="1cm" />
-							<fo:table-column column-width="7.5cm" />
-							<fo:table-column column-width="5cm" />
-							<fo:table-column column-width="2.5cm" />
-							<fo:table-column column-width="2.5cm" />
+							<fo:table-column column-width="10cm" />
+							<fo:table-column column-width="4cm" />
+							<fo:table-column column-width="2cm" />
+							<fo:table-column column-width="2cm" />
 							<fo:table-header font-weight="bold">
 								<fo:table-row keep-together="always">
 									<fo:table-cell border="1pt solid black">
